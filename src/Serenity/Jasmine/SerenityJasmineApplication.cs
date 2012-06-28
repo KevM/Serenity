@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using Bottles;
 using Bottles.Diagnostics;
-using FubuMVC.Coffee;
 using FubuMVC.Core;
 using FubuMVC.Core.Packaging;
 using FubuMVC.StructureMap;
@@ -16,7 +15,7 @@ namespace Serenity.Jasmine
         void AddContentFolder(string contentFolder);
     }
 
-    public class SerenityJasmineApplication : IApplicationSource, IPackageLoader, ISerenityJasmineApplication
+    public class SerenityJasmineApplication : IApplicationSource, IBottleLoader, ISerenityJasmineApplication
     {
         private readonly IList<string> _contentFolders = new List<string>();
 
